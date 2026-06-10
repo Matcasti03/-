@@ -1,0 +1,286 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    min-height:100vh;
+    background:url("img/fundo.jpg") center/cover no-repeat;
+}
+
+/* TOPO */
+header{
+    width:100%;
+    height:60px;
+    background:#84A686;
+}
+
+/* CONTAINER */
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:50px 20px;
+}
+
+/* CARD LOGIN */
+.login-box{
+    width:340px;
+    background:#84A686;
+    border-radius:10px;
+    padding:30px;
+    text-align:center;
+}
+
+/* LOGO */
+.logo{
+    width:170px;
+    margin-bottom:30px;
+}
+
+/* LABELS */
+label{
+    display:block;
+    text-align:left;
+    color:#fff;
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+/* INPUTS */
+input{
+    width:100%;
+    height:60px;
+    border:none;
+    border-radius:15px;
+    background:#D2EBD3;
+    padding:0 15px;
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+/* SENHA */
+.senha-box{
+    position:relative;
+}
+
+.eye{
+    position:absolute;
+    right:20px;
+    top:18px;
+    cursor:pointer;
+    font-size:22px;
+}
+
+/* LINKS */
+.link{
+    display:block;
+    color:#000;
+    text-decoration:none;
+    margin-bottom:20px;
+}
+
+.link:hover{
+    text-decoration:underline;
+}
+
+.cadastro{
+    margin-bottom:30px;
+    font-size:18px;
+}
+
+.cadastro a{
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.cadastro a:hover{
+    text-decoration:underline;
+}
+
+/* BOTÃO */
+button{
+    width:140px;
+    height:60px;
+    border:none;
+    border-radius:10px;
+    background:#D2EBD3;
+    font-size:22px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/*ESQUECI A SENHA*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#e5e5e5;
+    display:flex;
+    justify-content:center;
+    padding-top:20px;
+}
+
+.tela{
+    width:358px;
+}
+
+/* Barra superior */
+
+.topo{
+    width:358px;
+    height:48px;
+    background:#95AE90;
+}
+
+/* Botão voltar */
+
+.voltar{
+    width:30px;
+    height:30px;
+    border:2px solid black;
+    border-radius:50%;
+    margin-top:8px;
+    margin-left:8px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:16px;
+    cursor:pointer;
+}
+
+/* Fundo */
+
+.fundo{
+    width:358px;
+    height:850px;
+
+    background-image:url("../img/cachoeira.jpg");
+    background-size:cover;
+    background-position:center;
+
+    padding-top:40px;
+}
+
+/* Caixa principal */
+
+.container{
+    width:285px;
+    height:570px;
+
+    background:#95AE90;
+
+    margin:45px auto 0 auto;
+
+    border-radius:10px;
+
+    position:relative;
+}
+
+/* Logo */
+
+.logo{
+    width:120px;
+
+    position:absolute;
+
+    top:-45px;
+    left:50%;
+
+    transform:translateX(-50%);
+}
+
+/* Labels */
+
+label{
+    display:block;
+    font-size:18px;
+    color:black;
+    margin-left:20px;
+}
+
+/* Primeiro label */
+
+.container label:first-of-type{
+    padding-top:120px;
+}
+
+/* Campos */
+
+.campo{
+    width:265px;
+    height:60px;
+
+    margin-left:10px;
+    margin-top:10px;
+
+    border:none;
+    border-radius:15px;
+
+    background:#D8E8D7;
+
+    padding-left:15px;
+
+    font-size:16px;
+    outline:none;
+}
+
+/* Texto senha */
+
+.senha-titulo{
+    margin-top:45px;
+    margin-bottom:10px;
+}
+
+/* Campo senha */
+
+.senha-box{
+    position:relative;
+}
+
+/* Olho */
+
+.olho{
+    position:absolute;
+    right:25px;
+    top:18px;
+
+    font-size:24px;
+    cursor:pointer;
+}
+
+/* Botão */
+
+.entrar{
+    width:115px;
+    height:55px;
+
+    border:none;
+    border-radius:10px;
+
+    background:#D8E8D7;
+
+    font-size:18px;
+
+    margin-top:75px;
+    margin-left:85px;
+
+    cursor:pointer;
+}
+
+.entrar:hover{
+    opacity:0.9;
+}

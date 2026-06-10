@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:#d9d9d9;
+}
+
+header{
+    width:100%;
+    height:60px;
+    background:#84A686;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:calc(100vh - 60px);
+}
+
+.login-box{
+    width:340px;
+    background:#84A686;
+    border-radius:10px;
+    padding:30px;
+}
+
+.logo{
+    width:170px;
+    display:block;
+    margin:0 auto 30px;
+}
+
+label{
+    display:block;
+    color:white;
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+input{
+    width:100%;
+    height:70px;
+    border:none;
+    border-radius:15px;
+    background:#D2EBD3;
+    padding:0 15px;
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+.senha-box{
+    position:relative;
+}
+
+.eye{
+    position:absolute;
+    right:15px;
+    top:23px;
+    cursor:pointer;
+}
+
+.links{
+    text-align:center;
+}
+
+.links a{
+    color:black;
+    text-decoration:none;
+    margin:0 5px;
+}
+
+.links a:hover{
+    text-decoration:underline;
+}
+
+.btn-area{
+    text-align:center;
+    margin-top:40px;
+}
+
+button{
+    width:140px;
+    height:60px;
+    border:none;
+    border-radius:10px;
+    background:#D2EBD3;
+    font-size:22px;
+    cursor:pointer;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+</style>
+
+</head>
+<body>
+
+<header></header>
+
+<div class="container">
+
+    <div class="login-box">
+
+        <img src="img/logo.png" alt="Logo" class="logo">
+
+        <label>E-mail:</label>
+        <input type="email">
+
+        <label>Senha:</label>
+
+        <div class="senha-box">
+            <input type="password">
+            <span class="eye">👁</span>
+        </div>
+
+        <div class="links">
+            <a href="#">Não tenho uma conta? Criar</a>
+            <br><br>
+            <a href="#">Esqueci minha senha</a>
+        </div>
+
+        <div class="btn-area">
+            <button>Entrar</button>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

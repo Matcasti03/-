@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esqueci Minha Senha</title>
+
+    <link rel="stylesheet" href="CSS/styles.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="tela">
+
+        <div class="topo">
+            <div class="voltar">
+                <i class="fa-solid fa-arrow-left"></i>
+            </div>
+        </div>
+
+        <div class="fundo">
+
+            <div class="container">
+
+                <img src="img/logo.png" alt="Logo" class="logo">
+
+                <label>e-mail:</label>
+                <input type="email" class="campo">
+
+                <label class="senha-titulo">
+                    crie sua nova senha:
+                </label>
+
+                <div class="senha-box">
+
+                    <input
+                        type="password"
+                        class="campo"
+                        id="senha"
+                    >
+
+                    <span class="olho" onclick="mostrarSenha()">
+                        <i
+                            class="fa-regular fa-eye-slash"
+                            id="icone"
+                        ></i>
+                    </span>
+
+                </div>
+
+                <button class="entrar">
+                    Entrar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function mostrarSenha(){
+
+            let senha = document.getElementById("senha");
+            let icone = document.getElementById("icone");
+
+            if(senha.type === "password"){
+
+                senha.type = "text";
+
+                icone.classList.remove("fa-eye-slash");
+                icone.classList.add("fa-eye");
+
+            }else{
+
+                senha.type = "password";
+
+                icone.classList.remove("fa-eye");
+                icone.classList.add("fa-eye-slash");
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
