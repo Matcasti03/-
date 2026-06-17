@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Criar Conta</title>
+
+<link rel="stylesheet" href="CSS/styles.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<div class="tela">
+
+    <div class="topo">
+        <div class="voltar">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+    </div>
+
+    <div class="fundo">
+
+        <div class="container">
+<button type="button" onclick="document.body.classList.toggle('dark')" class="btn-dark">
+    🌙 
+</button>
+            <img src="img/logo.png" alt="Logo" class="logo">
+
+            <label>Nome:</label>
+            <input type="text" class="campo">
+
+            <label>E-mail:</label>
+            <input type="email" class="campo">
+
+            <label>Crie sua senha:</label>
+
+            <div class="senha-box">
+
+                <input type="password" class="campo" id="senha">
+
+                <span class="olho" onclick="mostrarSenha()">
+                    <i class="fa-regular fa-eye-slash" id="icone"></i>
+                </span>
+
+            </div>
+
+            <label>Confirmar senha:</label>
+
+            <div class="senha-box">
+
+                <input type="password" class="campo" id="confirmar">
+
+                <span class="olho" onclick="mostrarConfirmar()">
+                    <i class="fa-regular fa-eye-slash" id="icone2"></i>
+                </span>
+
+            </div>
+
+            <button class="btn-criar" onclick="window.location.href='index.html'">
+                Criar Conta
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+function mostrarSenha() {
+
+    let senha = document.getElementById("senha");
+    let icone = document.getElementById("icone");
+
+    if (senha.type === "password") {
+        senha.type = "text";
+        icone.classList.remove("fa-eye-slash");
+        icone.classList.add("fa-eye");
+    } else {
+        senha.type = "password";
+        icone.classList.remove("fa-eye");
+        icone.classList.add("fa-eye-slash");
+    }
+}
+
+function mostrarConfirmar() {
+
+    let confirmar = document.getElementById("confirmar");
+    let icone2 = document.getElementById("icone2");
+
+    if (confirmar.type === "password") {
+        confirmar.type = "text";
+        icone2.classList.remove("fa-eye-slash");
+        icone2.classList.add("fa-eye");
+    } else {
+        confirmar.type = "password";
+        icone2.classList.remove("fa-eye");
+        icone2.classList.add("fa-eye-slash");
+    }
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+
+    background-image: url("../img/logarlight.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body.dark {
+    background-image: url("../img/logardark.png");
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    background: #84A686;
+}
+
+body.dark header {
+    background: #1B262C;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 60px);
+}
+
+.login-box {
+    width: 340px;
+    background: #84A686;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.2);
+}
+
+body.dark .login-box {
+    background: #1f2a30;
+}
+
+.logo {
+    width: 170px;
+    display: block;
+    margin: 0 auto 30px;
+}
+
+label {
+    display: block;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    height: 70px;
+    border: none;
+    border-radius: 15px;
+    background: #D2EBD3;
+    padding: 0 15px;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+body.dark input {
+    background: #2a3a42;
+    color: white;
+}
+
+.senha-box {
+    position: relative;
+}
+
+.olho {
+    position: absolute;
+    right: 15px;
+    top: 22px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.links {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.links a {
+    color: black;
+    text-decoration: none;
+}
+
+body.dark .links a {
+    color: #ccc;
+}
+
+.btn-area {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-entrar {
+    width: 140px;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    background: #D2EBD3;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+body.dark .btn-entrar {
+    background: #2a3a42;
+    color: white;
+}
+
+.btn-criar {
+    width: 140px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+
+    background: #84A686; /* igual caixa */
+    color: white;
+
+    font-size: 14px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+body.dark .btn-criar {
+    background: #1f2a30; /* igual caixa no dark */
+    color: white;
+}
+
+.btn-esqueci {
+    width: 140px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+
+    background: #84A686; /* igual caixa */
+    color: white;
+
+    font-size: 14px;
+    cursor: pointer;
+}
+
+body.dark .btn-esqueci {
+    background: #1f2a30; /* igual caixa no dark */
+    color: white;
+}
+
+/* HOVER GERAL */
+.btn-entrar:hover,
+.btn-esqueci:hover,
+.btn-criar:hover {
+    transform: scale(1.05);
+}
+
+.btn-dark {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    background-image: url("../img/logodark.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: 999;
+    transition: 0.3s;
+}
+
+.btn-dark:hover {
+    transform: scale(1.1);
+}
+
+body.dark .btn-dark {
+    filter: brightness(1.2);
+}

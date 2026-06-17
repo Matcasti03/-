@@ -1,407 +1,323 @@
-/* =========================
-   RESET
-========================= */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* =========================
-   BODY
-========================= */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
 
-body{ 
-
-font-family:"Poppins", sans-serif; 
-margin: 0; 
-padding: 100; 
-background-image: url("../img/Fundo1light.png"); 
-background-size: cover; 
-background-position: center center; 
-background-repeat: no-repeat; 
-background-attachment: fixed; 
-} 
-
-/* =========================
-   LOGO
-========================= */
-
-.logo{
-    position:absolute;
-    top:5px;
-    left:25px;
-    z-index:10;
+    background-image: url("../img/Fundo1light.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-.logo img{
-    width:90px;
+body.dark {
+    background-image: url("../img/fundo2D.png");
 }
 
-/* =========================
-   BANNER
-========================= */
-
-.banner{
-    position:relative;
-    width:100%;
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
-.banner img{
-    width:100%;
-    height:330px;
-    object-fit:cover;
-    display:block;
+.logo img {
+    width: 180px;
+    height: auto;
+    transition: 0.3s;
+    position: absolute;
 }
 
-/* =========================
-   TEXTO DO BANNER
-========================= */
-
-.texto-banner{
-    position:absolute;
-
-    top:50%;
-    left:50%;
-
-    transform:translate(-50%, -50%);
-
-    text-align:center;
-
-    color:white;
+.banner {
+    position: relative;
+    width: 100%;
 }
 
-.texto-banner h1{
-    font-size:2rem;
-    font-weight:300;
-
-    margin-left:35px;
+.banner img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    display: block;
 }
 
-.tiete{
-    font-family:'Seaweed Script', cursive;
+body.dark .banner img {
+    filter: brightness(0.75);
+}
+.btn-dark {
+    
+position: fixed;
+    top: -100px;
+    right: -700px;
 
-    font-size:5rem;
+    width: 50px;
+    height: 50px;
 
-    line-height:1;
+    border: none;
+    border-radius: 50%;
 
-    text-shadow:2px 2px 8px rgba(0,0,0,.3);
+    cursor: pointer;
+
+    background-image: url("../img/logodark.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: 9999;
+    transition: 0.3s;
 }
 
-/* =========================
-   BOTÃO
-========================= */
-
-.btn-entrar{
-    display:inline-block;
-
-    margin-top:20px;
-
-    padding:12px 80px;
-
-    background:#0a8b17;
-
-    color:white;
-
-    border-radius:30px;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
-    box-shadow:0 6px 10px rgba(0,0,0,.2);
+.btn-dark:hover {
+    transform: scale(1.1);
 }
 
-/* =========================
-   MENU
-========================= */
-
-#menu{
-    background:#9db796;
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:20px;
-
-    padding:15px;
-
-    flex-wrap:wrap;
+body.dark .btn-dark {
+    filter: brightness(1.2);
 }
 
-#menu a{
-    color:black;
-    text-decoration:none;
+.btn-dark:hover {
+    transform: scale(1.1);
 }
 
-#menu a:hover{
-    color:white;
+body.dark .btn-dark {
+    filter: brightness(1.2);
 }
 
-/* =========================
-   SOBRE
-========================= */
-
-#sobre{
-    display:flex;
-
-    justify-content:center;
-
-    padding:20px;
-
-    margin-top:10px;
+.texto-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
 }
 
-.caixa-sobre{
-
-    width:90%;
-
-    max-width:1000px;
-
-    background:rgba(147,255,147,0.25);
-
-    border-radius:15px;
-
-    padding:15px;
-
-    backdrop-filter:blur(8px);
-
-    -webkit-backdrop-filter:blur(8px);
-
-    box-shadow:0 8px 25px rgba(0,0,0,.20);
+.texto-banner h1 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-left: 35px;
 }
 
-.caixa-sobre h2{
-
-    font-family:'Rubik Doodle Shadow', cursive;
-
-    font-size:32px;
-
-    color:#000;
-
-    margin-bottom:15px;
-
-    text-align:center;
+.tiete {
+    font-family: 'Seaweed Script', cursive;
+    font-size: 5rem;
+    line-height: 1;
+    text-shadow: 2px 2px 8px rgba(0,0,0,.3);
 }
 
-.texto-sobre{
+.btn-entrar {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 80px;
 
-    background:rgba(120,170,100,.45);
+    background: #0a8b17;
+    color: white;
 
-    border-radius:12px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
 
-    padding:15px;
-
-    box-shadow:0 5px 15px rgba(0,0,0,.18);
+    box-shadow: 0 6px 10px rgba(0,0,0,.2);
+    transition: 0.3s;
 }
 
-.texto-sobre p{
-
-    font-family:"Inria Serif", serif;
-
-    font-size:13px;
-
-    line-height:1.35;
-
-    color:#222;
-
-    text-align:justify;
+.btn-entrar:hover {
+    transform: scale(1.05);
 }
 
-/* =========================
-   FAIXAS SEPARADORAS
-========================= */
-
-.faixa-separadora{
-
-    width:85%;
-
-    max-width:500px;
-
-    height:60px;
-
-    margin:30px auto 20px auto;
-
-    background-color:#A7BE9B;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    border-radius:15px;
-
-    box-shadow:0 4px 8px rgba(0,0,0,.15);
+#menu {
+    background: #9db796;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    flex-wrap: wrap;
 }
 
-.faixa-separadora h2{
-
-    margin:0;
-
-    font-family:'Rubik Doodle Shadow', cursive;
-
-    font-size:28px;
-
-    color:#333;
-
-    text-align:center;
+#menu a {
+    color: black;
+    text-decoration: none;
 }
 
-/* =========================
-   SEÇÕES
-========================= */
-
-.secao{
-
-    min-height:300px;
-
-    padding:40px 20px;
+#menu a:hover {
+    color: white;
 }
 
-/* =========================
-   ÚLTIMOS TRABALHOS
-========================= */
-
-.cards-trabalhos{
-    width:90%;
-    max-width:1200px;
-    margin:20px auto;
-
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
-    gap:25px;
-}
-.trabalho{
-    width:100%;
-
-    background:#9db796;
-
-    border-radius:15px;
-
-    overflow:hidden;
-
-    box-shadow:0 4px 10px rgba(0,0,0,.15);
+#sobre {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 10px;
 }
 
-.trabalho img{
+.caixa-sobre {
+    width: 90%;
+    max-width: 1000px;
 
-    width:100%;
+    background: rgba(147,255,147,0.25);
+    border-radius: 15px;
+    padding: 15px;
 
-    height:220px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 
-    object-fit:cover;
-
-    display:block;
+    box-shadow: 0 8px 25px rgba(0,0,0,.20);
 }
 
-.conteudo{
-
-    padding:15px;
+.caixa-sobre h2 {
+    font-family: 'Rubik Doodle Shadow', cursive;
+    font-size: 32px;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
-.data{
-
-    color:#777;
-
-    font-size:14px;
+.texto-sobre {
+    background: rgba(120,170,100,.45);
+    border-radius: 12px;
+    padding: 15px;
 }
 
-.trabalho h3{
-
-    margin:10px 0;
-
-    color:#2f5130;
-
-    font-family:"Inria Serif", serif;
+.texto-sobre p {
+    font-family: "Inria Serif", serif;
+    font-size: 13px;
+    line-height: 1.35;
+    color: #222;
+    text-align: justify;
 }
 
-.trabalho p{
+.faixa-separadora {
+    width: 85%;
+    max-width: 500px;
+    height: 60px;
+    margin: 30px auto 20px auto;
 
-    font-size:15px;
+    background-color: #A7BE9B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    line-height:1.5;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,.15);
 }
 
-.trabalho a{
-
-    text-decoration:none;
-
-    font-weight:bold;
-
-    color:#2f5130;
+.faixa-separadora h2 {
+    font-family: 'Rubik Doodle Shadow', cursive;
+    font-size: 28px;
 }
 
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-
-    background:#9db796;
-
-    text-align:center;
-
-    padding:20px;
+.secao {
+    min-height: 300px;
+    padding: 40px 20px;
 }
-/* PC */
 
-@media (min-width: 769px){
+.cards-trabalhos {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
 
-    .caixa-sobre{
-        max-width:900px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.trabalho {
+    background: #9db796;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}
+
+.trabalho img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.conteudo {
+    padding: 15px;
+}
+
+.data {
+    color: #777;
+    font-size: 14px;
+}
+
+.trabalho h3 {
+    margin: 10px 0;
+    color: #2f5130;
+    font-family: "Inria Serif", serif;
+}
+
+.trabalho p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+footer {
+    background: #9db796;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (min-width: 769px) {
+
+    .caixa-sobre {
+        max-width: 900px;
     }
 
-    .texto-sobre p{
-        font-size:17px;
-        line-height:1.8;
+    .texto-sobre p {
+        font-size: 17px;
+        line-height: 1.8;
     }
 
-    .banner img{
-        height:500px;
+    .banner img {
+        height: 500px;
     }
 
-    .texto-banner h1{
-        font-size:3rem;
+    .texto-banner h1 {
+        font-size: 3rem;
     }
 
-    .tiete{
-        font-size:7rem;
-    }
-
-    .trabalho{
-        width:350px;
+    .tiete {
+        font-size: 7rem;
     }
 }
-@media (min-width: 900px){
-  
 
-    .banner img{
-        height:550px;
+@media (min-width: 900px) {
+
+    .banner img {
+        height: 550px;
     }
 
-    .texto-banner h1{
-        font-size:3rem;
-    }
-
-    .tiete{
-        font-size:8rem;
+    .tiete {
+        font-size: 8rem;
     }
 }
-@media (m-width: 900px){
-  
 
-    .banner img{
-        height:550px;
+@media (max-width: 768px) {
+    .logo img {
+        width: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 100px;
+    }
+}
+@media (max-width: 768px) {
+
+    .btn-dark {
+        top: 235px;
+        right: 115px;
+
+        width: 45px;
+        height: 45px;
     }
 
-    .texto-banner h1{
-        font-size:3rem;
-    }
-
-    .tiete{
-        font-size:8rem;
-    }
 }

@@ -1,286 +1,218 @@
-/* RESET */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
-    min-height:100vh;
-    background:url("img/fundo.jpg") center/cover no-repeat;
 }
 
-/* TOPO */
-header{
-    width:100%;
-    height:60px;
-    background:#84A686;
+body {
+    min-height: 100vh;
+    background: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* CONTAINER */
-.container{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:50px 20px;
+body.dark {
+     margin: 0;
+    padding: 0;
+
+    background-image: url("../img/logardark.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+body.dark .topo {
+    background: #1B262C;
+}
+body.dark .container {
+    background: #1f2a30;
+}
+body.dark label {
+    color: white;
 }
 
-/* CARD LOGIN */
-.login-box{
-    width:340px;
-    background:#84A686;
-    border-radius:10px;
-    padding:30px;
-    text-align:center;
+body.dark .campo {
+    background: #2a3a42;
+    color: white;
+}
+body.dark .btn-entrar {
+    background: #2a3a42;
+    color: white;
 }
 
-/* LOGO */
-.logo{
-    width:170px;
-    margin-bottom:30px;
+body.dark .btn-esqueci {
+    background: #2f4a3a;
 }
 
-/* LABELS */
-label{
-    display:block;
-    text-align:left;
-    color:#fff;
-    font-size:22px;
-    margin-bottom:10px;
+body.dark .btn-criar {
+    background: linear-gradient(135deg, #16a34a, #15803d);
 }
 
-/* INPUTS */
-input{
-    width:100%;
-    height:60px;
-    border:none;
-    border-radius:15px;
-    background:#D2EBD3;
-    padding:0 15px;
-    font-size:18px;
-    margin-bottom:25px;
+.tela {
+    width: 100%;
+    min-height: 100vh;
 }
 
-/* SENHA */
-.senha-box{
-    position:relative;
+.topo {
+    width: 100%;
+    height: 50px;
+    background: #95AE90;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
 }
 
-.eye{
-    position:absolute;
-    right:20px;
-    top:18px;
-    cursor:pointer;
-    font-size:22px;
+.fundo {
+    width: 100%;
+    min-height: calc(100vh - 50px);
+
+    background-image: url("../img/logarlight.png");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* LINKS */
-.link{
-    display:block;
-    color:#000;
-    text-decoration:none;
-    margin-bottom:20px;
+body.dark .fundo {
+    background-image: url("../img/logodark.png");
 }
 
-.link:hover{
-    text-decoration:underline;
+.container {
+    width: 380px;
+    max-width: 90%;
+    background: #95AE90;
+    border-radius: 15px;
+    padding: 30px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-.cadastro{
-    margin-bottom:30px;
-    font-size:18px;
+.logo {
+    width: 120px;
+    display: block;
+    margin: 0 auto 25px;
+    position: relative;
+    top: -40px;
 }
 
-.cadastro a{
-    color:#000;
-    text-decoration:none;
-    font-weight:bold;
+label {
+    display: block;
+    font-size: 16px;
+    color: black;
+    margin-bottom: 8px;
 }
 
-.cadastro a:hover{
-    text-decoration:underline;
+.campo {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 12px;
+    background: #D8E8D7;
+    padding: 10px 15px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    outline: none;
 }
 
-/* BOTÃO */
-button{
-    width:140px;
-    height:60px;
-    border:none;
-    border-radius:10px;
-    background:#D2EBD3;
-    font-size:22px;
-    cursor:pointer;
-    transition:.3s;
+.senha-box {
+    position: relative;
 }
 
-button:hover{
-    transform:scale(1.05);
+.olho {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    font-size: 20px;
 }
 
-/*ESQUECI A SENHA*/
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+.btn-area {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
 }
 
-body{
-    background:#e5e5e5;
-    display:flex;
-    justify-content:center;
-    padding-top:20px;
+.btn-criar {
+    width: 100%;
+    height: 50px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.tela{
-    width:358px;
+.btn-criar:hover {
+    transform: scale(1.03);
 }
 
-/* Barra superior */
+.btn-entrar {
+    width: 100%;
+    height: 50px;
 
-.topo{
-    width:358px;
-    height:48px;
-    background:#95AE90;
+    border: none;
+    border-radius: 12px;
+
+    background: #D8E8D7;
+    font-size: 16px;
+
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-/* Botão voltar */
-
-.voltar{
-    width:30px;
-    height:30px;
-    border:2px solid black;
-    border-radius:50%;
-    margin-top:8px;
-    margin-left:8px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:16px;
-    cursor:pointer;
+.btn-entrar:hover {
+    transform: scale(1.03);
 }
 
-/* Fundo */
+.btn-esqueci {
+    width: 100%;
+    height: 45px;
 
-.fundo{
-    width:358px;
-    height:850px;
+    border: none;
+    border-radius: 12px;
 
-    background-image:url("../img/cachoeira.jpg");
-    background-size:cover;
-    background-position:center;
+    background: #6fa86f;
+    color: white;
 
-    padding-top:40px;
+    font-size: 14px;
+
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-/* Caixa principal */
-
-.container{
-    width:285px;
-    height:570px;
-
-    background:#95AE90;
-
-    margin:45px auto 0 auto;
-
-    border-radius:10px;
-
-    position:relative;
+.btn-esqueci:hover {
+    transform: scale(1.03);
 }
+.btn-dark {
+    position: fixed;
+    top: 20px;
+    right: 20px;
 
-/* Logo */
+    width: 50px;
+    height: 50px;
 
-.logo{
-    width:120px;
+    border: none;
+    border-radius: 50%;
 
-    position:absolute;
+    cursor: pointer;
 
-    top:-45px;
-    left:50%;
+    background-image: url("../img/logodark.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
-    transform:translateX(-50%);
-}
-
-/* Labels */
-
-label{
-    display:block;
-    font-size:18px;
-    color:black;
-    margin-left:20px;
-}
-
-/* Primeiro label */
-
-.container label:first-of-type{
-    padding-top:120px;
-}
-
-/* Campos */
-
-.campo{
-    width:265px;
-    height:60px;
-
-    margin-left:10px;
-    margin-top:10px;
-
-    border:none;
-    border-radius:15px;
-
-    background:#D8E8D7;
-
-    padding-left:15px;
-
-    font-size:16px;
-    outline:none;
-}
-
-/* Texto senha */
-
-.senha-titulo{
-    margin-top:45px;
-    margin-bottom:10px;
-}
-
-/* Campo senha */
-
-.senha-box{
-    position:relative;
-}
-
-/* Olho */
-
-.olho{
-    position:absolute;
-    right:25px;
-    top:18px;
-
-    font-size:24px;
-    cursor:pointer;
-}
-
-/* Botão */
-
-.entrar{
-    width:115px;
-    height:55px;
-
-    border:none;
-    border-radius:10px;
-
-    background:#D8E8D7;
-
-    font-size:18px;
-
-    margin-top:75px;
-    margin-left:85px;
-
-    cursor:pointer;
-}
-
-.entrar:hover{
-    opacity:0.9;
+    z-index: 999;
+    transition: 0.3s;
 }
