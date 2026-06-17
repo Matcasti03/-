@@ -88,6 +88,9 @@ body.dark .btn-dark {
     filter: brightness(1.2);
 }
 
+body .dark-banner {
+    background-image: url("../img/inicialdark.png");
+}
 .texto-banner {
     position: absolute;
     top: 50%;
